@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+    {% load static %}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table border="1">
+        <caption>Hotel</caption>
+        <tr>
+            <td>Id</td>
+            <td>Name</td>
+            <td>Location</td>
+            <td>Type</td>
+            <td>Rating</td>
+            <td>Contact</td>
+            <td>Address</td>
+            <td>image</td>
+          
+        </tr>
+        {% for hotel in hotels %}
+        <tr>
+            <td>{{hotel.hotelId}}</td>
+            <td>{{hotel.hotelName}}</td>
+            <td>{{hotel.location}}</td>
+            <td>{{hotel.hoteType}}</td>
+            <td>{{hotel.rating}}</td>
+            <td>{{hotel.contact}}</td>
+            <td>{{hotel.address}}</td>
+            <td><img src="/{{hotel.hotel_image}}" height="100" width="100"></td>
+
+        </tr>
+        {% endfor %}
+        
+    </table>
+
+
+
+
+</body>
+</html>
